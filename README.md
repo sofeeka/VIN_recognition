@@ -1,6 +1,4 @@
-# CHI Academy Computer Vision Technical Test 
-#### Author: Sofiia Hrychukh 
-#### Created: Nov 17 2024
+# VIN Recognition 
 
 The task is to design a neural network that can classify small squared black&white image (VIN
 character boxes) with single handwritten character on it.
@@ -19,7 +17,7 @@ character boxes) with single handwritten character on it.
     - or directly try classifying `.jpg`, `.jpeg`, or `.png` pictures of any size
         ```
         python inference.py --input [path_to_test_files]
-The model will be saved into the path specified in `MODEL_SAVE_PATH` variable in `train.py`. If you change it, the script will try try to find the model, train a new one if not found, and save it to the specified file.
+The model will be saved into the path specified in `MODEL_SAVE_PATH` variable in `train.py`. If you change it, the script will attempt loading the model, fail, train a new one, and save it to a new file.
 ### Used libraries
 - `os`
 - `cv2`
@@ -121,7 +119,4 @@ model.add(tf.keras.layers.Dense(num_classes, activation='softmax'))
 ```
 Train / test acccuracy is around 94% / 92%
 Train loss is around 10% / 23%
-![Train log](plots/train_log.png)
-![Accutacy and Loss plot](plots/plot.png)
-
     
